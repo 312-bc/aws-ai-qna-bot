@@ -1,5 +1,7 @@
 TEMPLATES=$(shell for l in $$(ls ./templates | grep -v util | grep -v README.md);do echo templates/$$l;done)
 
+stop: build
+
 All: assets templates lambda website build
 
 build:
